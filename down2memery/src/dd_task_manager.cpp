@@ -16,6 +16,20 @@ dd_task_manager::dd_task_manager(){
 }
 
 dd_task_manager::~dd_task_manager(){
+    for (map<string, dd_share_task*>::iterator it = m_tasks.begin(); it != m_tasks.end(); it++) {
+        if (it->second){
+            it->second->stop();
+            delete it->second;
+        }
+    }
+    m_tasks.clear();
+    
+    for (vector<dd_net_work*>::iterator it1 = m_workers.begin(); it1 != m_workers.end(); it1++){
+        delete *(it1);
+    }
+    m_workers.clear();
+    
+    pthread_mutex_destroy(&m_mutex);
 }
 
 int dd_task_manager::create_task(download_task_type type, const char* url, const char* key, const char* cache_path, int64_t start_range, int64_t end_range){
@@ -69,9 +83,9 @@ dd_share_task dd_task_manager::do_get_task_callback(){
 int dd_task_manager::read_data(const char* key, uint8_t* buf, int size){
     int ret = -1;
     pthread_mutex_lock(&m_mutex);
-    dd_share_task* task = get_by_key(key);
-    if (task){
-        ret = task->read_data(buf, size);
+    map<string, dd_share_task*>::iterator it = m_tasks.find(key);
+    if (it != m_tasks.end() && it->second){
+        ret = it->second->read_data(buf, size);
     }
     pthread_mutex_unlock(&m_mutex);
     return ret;
