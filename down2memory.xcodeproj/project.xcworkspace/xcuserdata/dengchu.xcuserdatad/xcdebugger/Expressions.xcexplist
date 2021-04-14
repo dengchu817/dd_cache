@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "add_cache_index(dd_indexs_entry*, long long, long long, int, int):dd_cache_index.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "merge_index(dd_indexs_entry*, int):dd_cache_index.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "item - (dd_index_item*)indexs_entry-&gt;indexs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "dd_cache_unit::get_download_range(long long, long long&amp;, int&amp;):dd_cache_unit.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_entry-&gt;indexs[0]">
+            </PersistentString>
+            <PersistentString
+               value = "m_entry-&gt;indexs[1]">
+            </PersistentString>
+            <PersistentString
+               value = "m_entry-&gt;indexs[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "get_cache_gap(dd_indexs_entry*, long long, long long&amp;, int&amp;):dd_cache_index.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[2]">
+            </PersistentString>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[1]">
+            </PersistentString>
+            <PersistentString
+               value = "indexs_entry-&gt;file_size">
+            </PersistentString>
+            <PersistentString
+               value = "offset_in_stream_end = indexs_entry-&gt;indexs[b].offset_in_stream">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "find_cache_index(dd_indexs_entry*, long long):dd_cache_index.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[0]">
+            </PersistentString>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[1]">
+            </PersistentString>
+            <PersistentString
+               value = "indexs_entry-&gt;indexs[2]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
